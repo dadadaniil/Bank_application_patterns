@@ -1,6 +1,9 @@
 package org.bank.model;
 
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import org.bank.repository.TransactionInterface;
 
 import java.math.BigDecimal;
@@ -19,15 +22,14 @@ public class Transaction implements TransactionInterface {
     }
 
 
-
     public static class Builder {
-        private Transaction transaction;
+        private final Transaction transaction;
 
         public Builder() {
             transaction = new Transaction();
         }
 
-        public  Builder transactionId(String transactionId) {
+        public Builder transactionId(String transactionId) {
             transaction.transactionId = transactionId;
             return this;
         }

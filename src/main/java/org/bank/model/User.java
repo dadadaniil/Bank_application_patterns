@@ -1,6 +1,9 @@
 package org.bank.model;
 
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 
@@ -14,16 +17,15 @@ public class User {
     private String name;
     private String email;
 
-    public void increaseBalance(BigDecimal sum){
+    private User() {
+    }
+
+    public void increaseBalance(BigDecimal sum) {
         setBalance(balance.add(sum));
     }
 
-    public void decreaseBalance(BigDecimal sum){
+    public void decreaseBalance(BigDecimal sum) {
         setBalance(balance.subtract(sum));
-    }
-
-
-    private User() {
     }
 
     public static class Builder {

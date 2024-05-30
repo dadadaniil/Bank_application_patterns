@@ -6,7 +6,7 @@ import org.bank.repository.TransactionInterface;
 import java.math.BigDecimal;
 
 public class TransactionWithFee extends TransactionDecorator {
-    private BigDecimal fee;
+    private final BigDecimal fee;
 
     public TransactionWithFee(TransactionInterface decoratedTransaction, BigDecimal fee) {
         super(decoratedTransaction);

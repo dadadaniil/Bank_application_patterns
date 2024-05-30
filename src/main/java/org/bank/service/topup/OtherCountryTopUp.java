@@ -10,8 +10,6 @@ import org.bank.service.transaction.TransactionWithFee;
 
 import java.math.BigDecimal;
 
-import static org.bank.service.transaction.TransactionDecorator.isSufficientBudget;
-
 @Log4j2
 public class OtherCountryTopUp implements TopUpStrategy {
     private final static BigDecimal COMMISSION_PERCENT_RATE = BigDecimal.valueOf(0.99d);

@@ -5,7 +5,6 @@ import org.bank.model.Transaction;
 import org.bank.model.User;
 import org.bank.repository.TopUpStrategy;
 import org.bank.repository.TransactionInterface;
-import org.bank.service.transaction.TransactionDecorator;
 import org.bank.service.transaction.TransactionService;
 
 import java.math.BigDecimal;
