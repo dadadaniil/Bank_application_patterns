@@ -13,7 +13,6 @@ import java.math.BigDecimal;
 @EqualsAndHashCode
 @ToString
 public class Transaction implements TransactionInterface {
-    private String transactionId;
     private User from;
     private User to;
     private BigDecimal amount;
@@ -27,11 +26,6 @@ public class Transaction implements TransactionInterface {
 
         public Builder() {
             transaction = new Transaction();
-        }
-
-        public Builder transactionId(String transactionId) {
-            transaction.transactionId = transactionId;
-            return this;
         }
 
         public Builder from(User from) {
