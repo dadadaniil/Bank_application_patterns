@@ -1,12 +1,10 @@
 package org.bank.service.topup;
 
-import lombok.extern.log4j.Log4j2;
 import org.bank.model.Transaction;
 import org.bank.model.User;
 import org.bank.repository.TopUpStrategy;
 import org.bank.repository.TransactionInterface;
 import org.bank.service.transaction.TransactionService;
-import org.bank.service.transaction.TransactionWithFee;
 
 import java.math.BigDecimal;
 
@@ -22,10 +20,10 @@ public class OtherCountryTopUp implements TopUpStrategy {
     @Override
     public boolean fromOtherAccount(User sender, User receiver, double amount) {
         TransactionInterface transaction = new Transaction.Builder()
-                .from(sender)
-                .to(receiver)
-                .amount(amount)
-                .build();
+            .from(sender)
+            .to(receiver)
+            .amount(amount)
+            .build();
 
         return TransactionService.transferMoney(transaction);
     }

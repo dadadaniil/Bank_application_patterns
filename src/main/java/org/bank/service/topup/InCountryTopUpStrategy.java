@@ -23,10 +23,10 @@ public class InCountryTopUpStrategy implements TopUpStrategy {
     public boolean fromOtherAccount(User sender, User receiver, double amount) {
         BigDecimal amountBigDecimal = BigDecimal.valueOf(amount);
         TransactionInterface transaction = new Transaction.Builder()
-                .from(sender)
-                .to(receiver)
-                .amount(amount)
-                .build();
+            .from(sender)
+            .to(receiver)
+            .amount(amount)
+            .build();
 
 
         return TransactionService.transferMoney(transaction);
